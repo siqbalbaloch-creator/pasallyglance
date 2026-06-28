@@ -4,9 +4,9 @@
 // and Supabase sign-in (Google + email code).
 
 // --- deployment config (replace for your Supabase project) ------------------
-const SUPABASE_URL = "https://YOUR_PROJECT.supabase.co";
-const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
-const GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"; // for Google sign-in
+const SUPABASE_URL = "https://gmzdpvbpmplhymmiqele.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdtemRwdmJwbXBsaHltbWlxZWxlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI2NjUwMzQsImV4cCI6MjA5ODI0MTAzNH0._8ACH5mugHFgIgd-s6p0M9OWzjx04Hzpu3aWc73HL-s";
+const GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"; // optional — for Google sign-in
 const FUNCTIONS = SUPABASE_URL + "/functions/v1";
 
 // --- right-click menu -------------------------------------------------------

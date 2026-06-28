@@ -1,6 +1,6 @@
 # Supabase project config. Replace project_id with your project's Reference ID
 # (Supabase dashboard → Project Settings → General → Reference ID).
-project_id = "YOUR_PROJECT_REF"
+project_id = "gmzdpvbpmplhymmiqele"
 
 [functions.proxy]
 verify_jwt = true
