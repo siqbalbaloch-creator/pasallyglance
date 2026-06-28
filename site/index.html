@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PasallyGlance — instant, context-aware AI on any page</title>
+  <meta name="description" content="Select or right-click anything on a web page for an instant Claude answer. Privacy-first, model-agnostic, with a verification layer that checks answers against live sources." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">✦ PasallyGlance</div>
+      <nav>
+        <a href="#how">How it works</a>
+        <a href="#verify">Verification</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <!-- TODO: replace with your published Chrome Web Store URL -->
+        <a class="btn" href="STORE_URL">Add to Chrome</a>
+      </nav>
+    </header>
+
+    <section class="hero" style="border:0">
+      <div class="kicker">Privacy-first · bring your own key</div>
+      <h1>Ask AI about anything on the page.</h1>
+      <p class="sub">Select text or right-click any image, link, or paragraph and get an instant,
+        context-aware answer from Claude — streamed into a tidy popover, right where you're reading.</p>
+      <div class="cta">
+        <!-- TODO: replace STORE_URL -->
+        <a class="btn" href="STORE_URL">Add to Chrome — free</a>
+        <a class="btn alt" href="#pricing">See pricing</a>
+      </div>
+    </section>
+
+    <section id="how">
+      <h2>One gesture. An answer.</h2>
+      <p class="lead">No tab-switching, no copy-paste. PasallyGlance reads the context under your
+        cursor and only ever calls the model when you tap an action.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Select or right-click</h3>
+          <p>Highlight a phrase, or right-click an image, link, table, or email. A small chip appears with the actions that fit what you picked.</p>
+        </div>
+        <div class="card">
+          <h3>Explain · Summarize · Translate</h3>
+          <p>Explain a term, summarize a passage, translate into your language, identify an image, draft a reply, extract a table — context-aware, every time.</p>
+        </div>
+        <div class="card">
+          <h3>Follow up &amp; go deeper</h3>
+          <p>Ask follow-ups in the same popover, upgrade any answer to a stronger model, copy it, or drop a drafted reply straight into Gmail.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="verify">
+      <div class="kicker">The difference</div>
+      <h2>Answers you can check.</h2>
+      <p class="lead">Generic assistants generate. PasallyGlance can <strong>verify</strong>. Tap
+        Verify and the answer is re-checked against live web sources — claim by claim — and marked
+        <strong>✓ Supported</strong>, <strong>⚠ Unverified</strong>, or <strong>✗ Contradicted</strong>,
+        each with a source link. It's the trust layer a horizontal tool won't build.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Privacy-first</h3>
+          <p>Bring your own Anthropic key and content goes straight from your browser to Anthropic — there's no backend in the loop. On managed plans we proxy the request but never store your prompts or answers.</p>
+        </div>
+        <div class="card">
+          <h3>Model-agnostic</h3>
+          <p>Built on Claude, your key, no platform lock-in. Not wired to any one browser vendor's ecosystem.</p>
+        </div>
+        <div class="card">
+          <h3>Calm by default</h3>
+          <p>The chip only appears on selection or right-click. Nothing leaves your machine until you tap an action. Disable it per-site whenever you like.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <p class="lead">Bring your own key and the core stays free, forever. Pay for the power features —
+        or let us handle the key entirely.</p>
+      <div class="prices">
+        <div class="price">
+          <h3>Free</h3>
+          <div class="amt">$0</div>
+          <ul>
+            <li>Bring your own Anthropic key</li>
+            <li>Explain, summarize, translate, ask</li>
+            <li>Unlimited — you pay Anthropic directly</li>
+            <li>5 free managed asks to try, no key needed</li>
+          </ul>
+          <div class="note">Fully private — content never touches our servers.</div>
+        </div>
+        <div class="price">
+          <span class="tag">Power users</span>
+          <h3>Pro</h3>
+          <div class="amt">$5<span> / month</span></div>
+          <ul>
+            <li>Everything in Free</li>
+            <li>Verification layer</li>
+            <li>“Go deeper” on a stronger model</li>
+            <li>Gmail reply &amp; insert</li>
+            <li>Custom prompts</li>
+          </ul>
+          <div class="note">Still your key — unlimited, still private.</div>
+        </div>
+        <div class="price featured">
+          <span class="tag">No key required</span>
+          <h3>Pro Managed</h3>
+          <div class="amt">$9.99<span> / month</span></div>
+          <ul>
+            <li>Everything in Pro</li>
+            <li>We provide the Claude key</li>
+            <li>Generous monthly quota</li>
+            <li>Nothing to set up</li>
+          </ul>
+          <div class="note">We proxy to Anthropic and never store your content.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <h2>FAQ</h2>
+      <dl>
+        <dt>Do I need an API key?</dt>
+        <dd>Not to start — sign in and you get free managed asks. For unlimited free use, paste your own Anthropic key in the extension's Options.</dd>
+        <dt>Is my content private?</dt>
+        <dd>With your own key, content goes straight to Anthropic and never reaches us. On managed plans we relay the request to Anthropic but never store your prompts or answers — we count requests, not text. See our <a href="privacy.html">Privacy Policy</a>.</dd>
+        <dt>What's the verification layer?</dt>
+        <dd>A one-tap re-check of an answer against live web sources, scored claim by claim with links — so you can trust what you act on.</dd>
+        <dt>How do I cancel?</dt>
+        <dd>Subscriptions are billed through Paddle; cancel anytime and you keep access until the period ends.</dd>
+      </dl>
+    </section>
+
+    <footer>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <!-- TODO: replace with your support email -->
+      <a href="mailto:SUPPORT_EMAIL">Contact</a>
+      <div style="margin-top:10px">© 2026 PasallyGlance, operated by Korel (<a href="https://usekorel.com">usekorel.com</a>). Payments processed by Paddle as merchant of record on behalf of Korel. Built on Claude; not affiliated with Anthropic or Google.</div>
+    </footer>
+  </div>
+</body>
+</html>

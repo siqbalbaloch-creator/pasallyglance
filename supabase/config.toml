@@ -1,0 +1,13 @@
+# Supabase project config. Replace project_id with your project's Reference ID
+# (Supabase dashboard → Project Settings → General → Reference ID).
+project_id = "YOUR_PROJECT_REF"
+
+[functions.proxy]
+verify_jwt = true
+
+[functions.checkout]
+verify_jwt = true
+
+# Paddle calls this without a Supabase token, so JWT verification must be off.
+[functions.paddle-webhook]
+verify_jwt = false

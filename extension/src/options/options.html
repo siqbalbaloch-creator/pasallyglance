@@ -1,0 +1,75 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>PasallyGlance - Settings</title>
+<style>
+  body { font: 14px/1.6 -apple-system, Segoe UI, Roboto, sans-serif; max-width: 540px; margin: 32px auto; padding: 0 16px; color: #111; }
+  h1 { font-size: 18px; font-weight: 600; }
+  label { display: block; margin: 14px 0 4px; font-weight: 600; }
+  input, textarea, select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 8px; font: inherit; box-sizing: border-box; }
+  .row { display: flex; gap: 12px; }
+  .row > div { flex: 1; }
+  .hint { color: #777; font-size: 12px; margin-top: 2px; }
+  button { margin-top: 18px; padding: 9px 16px; border: 0; border-radius: 8px; background: #111; color: #fff; cursor: pointer; }
+  .ok { color: #178a3a; margin-left: 10px; }
+</style>
+<h1>PasallyGlance</h1>
+
+<label>Account</label>
+<div id="acct" class="hint" style="margin-bottom: 6px">Checking&hellip;</div>
+<div id="loggedout">
+  <button id="signin" type="button">Sign in with Google</button>
+  <div class="row" style="margin-top: 8px">
+    <input id="email" type="email" placeholder="you@email.com" />
+    <button id="sendcode" type="button" style="margin-top: 0">Email me a code</button>
+  </div>
+  <div class="row" id="coderow" style="margin-top: 8px; display: none">
+    <input id="code" placeholder="6-digit code" />
+    <button id="verifycode" type="button" style="margin-top: 0">Verify</button>
+  </div>
+</div>
+<button id="signout" type="button" style="background: #eee; color: #111; display: none">Sign out</button>
+<button id="up_pro" type="button" style="display: none">Upgrade to Pro &mdash; $5/mo</button>
+<button id="up_managed" type="button" style="display: none">Upgrade to Pro Managed &mdash; $9.99/mo</button>
+<div class="hint">Sign in (Google or an email code) to use PasallyGlance without your own key &mdash; 3 free actions a day, or a paid plan. Or paste your own Anthropic key below to stay fully private and unlimited.</div>
+
+<label>Anthropic API key</label>
+<input id="apiKey" type="password" placeholder="sk-ant-..." />
+<div class="hint">Stored locally in this browser only. Sent to Anthropic and nowhere else.</div>
+
+<div class="row">
+  <div>
+    <label>Quick model</label>
+    <input id="quickModel" />
+  </div>
+  <div>
+    <label>Deeper model</label>
+    <input id="deepModel" />
+  </div>
+</div>
+
+<label>Dwell delay: <span id="dwellLabel"></span> ms</label>
+<input id="dwellMs" type="range" min="300" max="1500" step="50" />
+<div class="hint">Lower = chip appears faster. This is the feel knob - tune it until it never surprises you.</div>
+
+<label>When to show on hover</label>
+<select id="trigger">
+  <option value="off">Off - use right-click or select (calm, default)</option>
+  <option value="hover">Show on hover (eager)</option>
+</select>
+<div class="hint">Off means the chip never appears on hover - invoke it by selecting text, or right-clicking and choosing "Ask AI about this". Eager pops the chip whenever you pause. Selected text always shows the chip in either mode.</div>
+
+<label>Translate into</label>
+<input id="translateTo" placeholder="blank = your browser language" />
+<div class="hint">Leave blank to translate into your browser's language. Or name a language, e.g. Spanish, Urdu, French.</div>
+
+<label>Daily request limit</label>
+<input id="dailyCap" type="number" min="0" placeholder="0 = no limit" />
+<div class="hint">A soft cap on model calls per day (0 = unlimited). Handy before you share the extension.</div>
+
+<label>Disabled on these sites (one per line)</label>
+<textarea id="blocklist" rows="4" placeholder="paypal.com&#10;mybank.com"></textarea>
+<div class="hint">The extension does nothing at all on these domains.</div>
+
+<button id="save">Save</button><span id="ok" class="ok"></span>
+
+<script src="options.js"></script>

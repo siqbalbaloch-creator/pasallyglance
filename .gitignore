@@ -1,0 +1,9 @@
+node_modules/
+.dev.vars
+.env
+.env.*
+.wrangler/
+.vercel/
+.DS_Store
+*.log
+npm-debug.log*
